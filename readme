@@ -1,0 +1,2 @@
+This project utilizes a ESP32 Cheap Yellow Display (CYD) (240x320) with a touch screen (ESP32-2432S028R). 
+The desktop display allows you to output MQTT.
