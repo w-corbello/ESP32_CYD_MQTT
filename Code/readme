@@ -1,1 +1,41 @@
 This folder contains the lastest code for the ESP32 CYD
+
+This site has everthing you will need to get started, before trying to work with the code I posted.
+Getting Started with ESP32 Cheap Yellow Display Board – CYD (ESP32-2432S028R)
+https://randomnerdtutorials.com/cheap-yellow-display-esp32-2432s028r/
+
+
+
+Please be sure to change the settings to match your needs
+
+#include "wifi_1.h"
+//SSID/password for router connection
+const char* ssid = "SSID";                    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change
+const char* passphrase = "PASSWORD";          <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change
+
+
+
+
+//MQTT settings
+//***********************************************************************
+
+
+const char* mqtt_server = "192.168.X.XXX";                  		//change it for your MQTT server IP or network name <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change
+int                     mqttPort            		= 1883;        			//1883 is the default port for MQTT. Change if necessary <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change
+char                    deviceId[]          		= "touch-001"; 			//every device should have a different name <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change
+char                    temp[50];
+char                    topic[]             		= "/touch-001/command"; //these topics should be different for each device as well <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change
+const char*             MQTT_STATE_TOPIC_1  		= "/touch-001/status_1";                                                           <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change
+const char*             MQTT_STATE_TOPIC_2  		= "/touch-001/status_2";                                                           <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change
+const char*             MQTT_STATE_TOPIC_3  		= "/touch-001/status_3";                                                           <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change
+const char*             MQTT_STATE_TOPIC_4  		= "/touch-001/status_4";                                                           <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change
+const char*             MQTT_STATE_TOPIC_5  		= "/touch-001/status_5";                                                           <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change
+const char*             MQTT_SIGNAL_TOPIC   		= "/touch-001/signal";                                                           <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change
+unsigned long           lastOperation;
+const long              MIN_OPERATION_INTERVAL  	= 2000L;
+boolean                 publish_now               	= false;
+long                    rssi;
+const char*             Button_ON                  	= "ON";
+const char*             Button_OFF                	= "OFF";
+char                    mqttUser[]                	= "MWTT_USER";                                                           <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change
+char                    mqttPassword[]            	= "MWTT_PASSWORD";                                                           <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Change
